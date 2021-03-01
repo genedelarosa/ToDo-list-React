@@ -1,4 +1,4 @@
-import { InputBase,Button, FormGroup, Grid, Paper, Typography } from '@material-ui/core'
+import { InputBase,Button, FormGroup, Grid, Card, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import React , {useState} from 'react'
 import { red, teal, common } from '@material-ui/core/colors'
@@ -37,9 +37,9 @@ function FormTODO(props) {
   
     return (
         <Typography variant="caption" display="block" align='center'>
-           <Grid md={8} container justify="center" alignItems="center">
+           <Grid container justify="center" alignItems="center">
             <FormGroup row='true'>
-                <Paper elevation={24} className={classes.root}>
+                <Card className={classes.root}>
                     <InputBase 
                         className={classes.input}
                         placeholder='Add Task'
@@ -55,7 +55,7 @@ function FormTODO(props) {
                         >
                         {Translate('add')}
                     </Button>
-                </Paper>  
+                </Card>  
                 </FormGroup> 
             </Grid> 
         </Typography>
