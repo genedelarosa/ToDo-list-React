@@ -7,7 +7,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
   root: {
-    color: teal[400],
+    color: teal[800],
   },
   chk: {
     textDecorationLine: "line-through",

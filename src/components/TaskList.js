@@ -6,7 +6,6 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import { teal, common } from "@material-ui/core/colors";
 import Translate from "../i18n/Translate";
 import IconButton from "@material-ui/core/IconButton";
-// import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
 
 const useStyles = makeStyles({
   root: {
@@ -17,6 +16,7 @@ const useStyles = makeStyles({
   button: {
     fontSize: 15,
     border: "2px solid",
+    fontWeight: "bold",
   },
   box: {
     display: "flex",
@@ -49,7 +49,6 @@ function TaskList(props) {
       <CheckBox key={item.id} data={item} onChange={onChangeStatus} />
       {item.done ? (
         <IconButton
-          size="small"
           aria-label="delete"
           onClick={onClickRemoveItem}
           className={classes.icon}

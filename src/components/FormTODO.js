@@ -5,11 +5,20 @@ import {
   Grid,
   Typography,
 } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
 import React, { useState } from "react";
-import { red, common } from "@material-ui/core/colors";
+import { teal, common } from "@material-ui/core/colors";
 import Translate from "../i18n/Translate";
 
+const useStyles = makeStyles({
+  root: {
+    backgroundColor: "#FFF",
+    color: common["black"],
+  },
+});
+
 function FormTODO(props) {
+  const classes = useStyles();
   const [description, setDescription] = useState("");
 
   const { handleAddItem } = props;
@@ -36,11 +45,16 @@ function FormTODO(props) {
             inputProps={{ "aria-label": "add task" }}
             value={description}
             onChange={(e) => setDescription(e.target.value)}
+            className={classes.root}
           />
           <Button
             onClick={handleSubmit}
             variant="contained"
-            style={{ backgroundColor: red[600], color: common["white"] }}
+            style={{
+              backgroundColor: teal[400],
+              color: common["white"],
+              fontWeight: "bold",
+            }}
             disabled={description ? "" : "disabled"}
           >
             {Translate("add")}
